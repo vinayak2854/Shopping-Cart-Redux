@@ -13,7 +13,7 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-center p-4 md:p-5 justify-between mt-2 mb-2 mx-4 md:mx-5 border-b-[3px] border-slate-500">
-      <div className="flex flex-row items-center gap-4 md:gap-5">
+      <div className="w-full flex flex-col md:flex-row items-center gap-4 md:gap-5">
         <div className="w-full md:w-[30%]">
           <img src={item.image} alt={item.title} className="w-full h-auto object-cover" />
         </div>
@@ -25,7 +25,7 @@ const CartItem = ({ item }) => {
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
             <p className="text-green-600 font-bold text-lg">${item.price}</p>
             <button
-              className="mt-2 md:mt-0 text-red-800 bg-red-200 group hover:bg-red-400 transition-transform duration-300 cursor-pointer rounded-full p-2 md:p-3"
+              className="mt-2 md:mt-0 text-red-800 bg-red-200 group hover:bg-red-300 transition-transform duration-300 cursor-pointer rounded-full p-2 md:p-3"
               onClick={removeFromCart}
             >
               <AiFillDelete />
@@ -38,6 +38,7 @@ const CartItem = ({ item }) => {
 };
 
 export default CartItem;
+
 
 
 // import { AiFillDelete } from "react-icons/ai";
